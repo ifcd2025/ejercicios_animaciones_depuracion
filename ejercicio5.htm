@@ -11,7 +11,23 @@
     <style>
         div {
             font-size: 6rem;
+            animation: animacion1 1s, animacion2 1s 1s forwards, animacion3 1s 2s forwards;
         }
+        @keyframes animacion1 {
+            100% {
+                transform: scale(1.2);
+            }
+        }
+        @keyframes animacion2 {
+            100% {
+                transform: rotateZ(90deg);
+            }
+        }
+        @keyframes animacion3 {
+            100% {
+                color: red;
+            }
+        }        
     </style>
 </head>
 <body>
@@ -26,7 +42,9 @@
                 <li class="list-group-item">Luego cambiar a color rojo</li>
                 <li class="list-group-item">Debemos poner todas las animaciones en la misma propiedad animation separadas por comas</li>
             </ul>
-        <video src="videos/video5.mp4" width="200" autoplay loop class="border-1 border m-auto d-block"></video>
+        <!-- Chrome y Edge no reproducen automáticamente un video salvo que le pongamos el atributo muted (sin sonido)-->
+
+        <video src="videos/video5.mp4" width="200" muted autoplay loop class="border-1 border m-auto d-block"></video>
     </main>
     </main>
 </body>

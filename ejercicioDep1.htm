@@ -28,7 +28,6 @@
       function sumarPares2(arr) {
         let suma = 0;
         for (let i = 0; i < arr.length; i++) {
-
           if (arr[i] % 2 === 0) {
             suma += arr[i];
           }
@@ -37,10 +36,12 @@
       }
 
       const array = Array.from({ length: 20_000_000 }, () => Math.floor(Math.random() * 100) + 1);
-
+      console.time("reloj1");
       sumarPares1(array);
-
+      console.timeEnd("reloj1");
+      console.time("reloj2");
       sumarPares2(array);
+      console.timeEnd("reloj2");
     </script>
   </body>
 </html>

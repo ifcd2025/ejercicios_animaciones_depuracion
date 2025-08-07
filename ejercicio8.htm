@@ -9,12 +9,32 @@
     <!-- Imágenes de Flaticon.com, salvo oveja de https://es.picmix.com/stamp/Running-Sheep-1863259 -->
 
     <style>
+        body {
+            /* Para que no aparezcan barras de scroll cuando el elemento se
+            vaya más allá de alto o ancho.
+            Estaría bien hacerlo en el ejercicio de la oveja y de los coches */
+            overflow: hidden;
+        }
         .copo {
             position: absolute;
             width: 60px;
             aspect-ratio: 1;
             top: -60px;
             display: block;
+        }
+    
+        .moverCopo {
+            animation: animacion 8s;
+        }
+        @keyframes animacion {
+            /* Lo de la opacidad no lo pedía el enunciado */
+            60% {
+                opacity: 1;
+            }
+            100% {
+                top: 100%;
+                opacity: 0;
+            }
         }
 
     </style>
@@ -32,10 +52,25 @@
                 <li class="list-group-item">- Ponerle el id a ""</li>
                 <li class="list-group-item">- Añadirlo como hijo de document body con appendChild</li>
                 <li class="list-group-item">- Cambiar su style.left a Math.floor(Math.random() * 95) + "%";</li>
-                <li class="list-group-item">- Añadirle una clase o usar style.animation que acelere hacia el final y durent 8 segundos</li>
+                <li class="list-group-item">- Añadirle una clase o usar style.animation que acelere hacia el final y durante 8 segundos</li>
             </ul>
     </main>
     <script>
+        function generarCopo(){
+            const clon = document.getElementById("copo").cloneNode();
+            clon.id = "";
+            document.body.appendChild(clon);
+            clon.style.left = Math.floor(Math.random() * 95) + "%"
+            clon.classList.add("moverCopo");
+            // Cuando lleguen al finbal estaría bien eliminar los copos, ya
+            // que si no se mantienen vivos dentro del body, aunque no se vean
+            clon.addEventListener("animationend", () => clon.remove());
+        }
+
+        document.getElementById("crear").addEventListener("click", generarCopo);
+        
+        // Si queremos que se generen solos:
+        // setInterval(generarCopo, 200);
     </script>
 </body>
 </html>

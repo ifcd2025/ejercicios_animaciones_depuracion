@@ -27,17 +27,40 @@
         }
         #f1 {
             background-color: red;
+            animation: animacion1 .3s infinite;
         }
         #f2 {
             background-color: blue;
+            animation: animacion2 .3s infinite;
         }
         #f3 {
             background-color: green;
+            animation: animacion3 .3s infinite;
         }
         #f4 {
             background-color: yellow;
-        }                
-       
+            animation: animacion4 .3s infinite;
+        }    
+        @keyframes animacion1 {
+            100% {
+                background-color: yellow;
+            }
+        }     
+        @keyframes animacion2 {
+            100% {
+                background-color: green;
+            }
+        }    
+        @keyframes animacion3 {
+            100% {
+                background-color: red;
+            }
+        }                         
+        @keyframes animacion4 {
+            100% {
+                background-color: blue;
+            }
+        }   
     </style>
 </head>
 <body>
@@ -53,7 +76,9 @@
         <ul class="bg-body w-50 m-auto text-start list-group list-unstyled p-2">
             <li class="list-group-item">Cambiar los colores de cada div de forma indefinida</li>
         </ul>
-        <video src="videos/video4.mp4" width="200" autoplay loop class="border-1 border m-auto d-block"></video>
+        <!-- Chrome y Edge no reproducen automáticamente un video salvo que le pongamos el atributo muted (sin sonido)-->
+
+        <video src="videos/video4.mp4" width="200" muted autoplay loop class="border-1 border m-auto d-block"></video>
     </main>
     </main>
 </body>

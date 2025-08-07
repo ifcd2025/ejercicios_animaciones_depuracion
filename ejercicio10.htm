@@ -38,6 +38,29 @@
             </ul>
     </main>
     <script>
+        document.getElementById("agrandar").addEventListener("click", () => {
+            const cuadros = [
+                { transform: "scale(1.5)"}
+            ];
+            const opciones = {duration: 1000};
+            // Con la Web Animations API no hay que hacer el truco del offsetWidth
+            document.getElementById("sol").animate(cuadros, opciones);
+        });
+        document.getElementById("rotar").addEventListener("click", () => {
+            const cuadros = [
+                { transform: "rotate(360deg)"}
+            ];
+            const opciones = {duration: 1000};
+            // Con la Web Animations API no hay que hacer el truco del offsetWidth
+            document.getElementById("sol").animate(cuadros, opciones);
+        });   
+        document.getElementById("empequeñecer").addEventListener("click", () => {
+            const cuadros = [
+                { transform: "scale(.5)"}
+            ];
+            const opciones = {duration: 1000};
+            document.getElementById("sol").animate(cuadros, opciones);
+        });         
     </script>
 </body>
 </html>

@@ -15,6 +15,31 @@
         #contenedor {
             width: fit-content;
         }
+        @keyframes agrandar {
+            100% {
+                transform: scale(1.5);
+            }
+        }
+        @keyframes empequeñecer {
+            100% {
+                transform: scale(.5);
+            }
+        }    
+        @keyframes rotar {
+            100% {
+                transform: rotateZ(360deg);
+            }
+        }    
+        /* Si queremos usar clases en JS */
+        .agrandar {
+            animation: agrandar 1s;
+        }   
+        .empequeñecer {
+            animation: empequeñcer 1s;
+        }  
+        .rotar {
+            animation: rotar 1s;
+        }                              
        
     </style>
 </head>
@@ -43,6 +68,38 @@
             </ul>
     </main>
     <script>
+        document.getElementById("agrandar").addEventListener("click", () => {
+            //Directamente sin clases
+            document.getElementById("sol").style.animation = "";
+            document.getElementById("sol").offsetWidth;
+            document.getElementById("sol").style.animation = "agrandar 1s";
+            // Con clases
+            /*document.getElementById("sol").classList.remove("agrandar")
+            document.getElementById("sol").offsetWidth;
+            document.getElementById("sol").classList.add("agrandar");*/
+        });
+        document.getElementById("rotar").addEventListener("click", () => {
+            const sol = document.getElementById("sol");
+            //Directamente sin clases
+            sol.style.animation = "";
+            sol.offsetWidth;
+            sol.style.animation = "rotar 1s";
+            // Con clases
+            /*sol.classList.remove("rotar")
+            sol.offsetWidth;
+            sol.classList.add("rotar");*/
+        });   
+        document.getElementById("empequeñecer").addEventListener("click", () => {
+            const sol = document.getElementById("sol");
+            //Directamente sin clases
+            sol.style.animation = "";
+            sol.offsetWidth;
+            sol.style.animation = "empequeñecer 1s";
+            // Con clases
+            /*sol.classList.remove("empequeñecer")
+            sol.offsetWidth;
+            sol.classList.add("empequeñecer");*/
+        });              
     </script>
 </body>
 </html>

@@ -9,6 +9,33 @@
     <!-- Imágenes de Flaticon.com-->
 
     <style>
+        #f1 {
+            animation: animacion1 1s infinite;
+            /*animation-name: animacion1;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;*/
+        }
+        @keyframes animacion1 {
+            50% {
+                transform: scale(1.2);
+            }
+        }
+        #f2 {
+            animation: animacion2 2s infinite;
+        }
+        @keyframes animacion2 {
+            50% {
+                transform: rotateZ(180deg);
+            }
+        }    
+        #f3 {
+            animation: animacion3 .5s infinite;
+        }
+        @keyframes animacion3 {
+            50% {
+                transform: translateX(100px);
+            }
+        }      
     </style>
 </head>
 <body>
@@ -24,7 +51,9 @@
             <li>El segundo fantasma tiene que rotar 180 grados y volver en 2 segundos, de forma indefinida</li>
             <li>El tercer fantamas tiene que moverse 100px a la derecha en  medio segundo, de forma indefinida</li>
         </ul>
-        <video src="videos/video1.mp4" width="500" autoplay loop class="border-1 border"></video>
+        <!-- Chrome y Edge no reproducen automáticamente un video salvo que le pongamos el atributo muted (sin sonido)-->
+
+        <video src="videos/video1.mp4" width="500" muted autoplay loop class="border-1 border"></video>
     </main>
 
 </body>

@@ -7,7 +7,7 @@
   </head>
   <body>
     <h1>
-      QUeremos que al hacer click en el div cambie su color de fondo, pero no funciona ¿Qué errores hay?
+      Queremos que al hacer click en el div cambie su color de fondo, pero no funciona ¿Qué errores hay?
     </h1>
     <div
       id="miDiv"
@@ -15,9 +15,13 @@
     ></div>
 
     <script>
-      const miDiv = document.getElementsById("miDiv"); 
+      // Dice que TypeError: document.getElementsById is not a function
+      // es getElementById sin la s
+      //const miDiv = document.getElementsById("miDiv"); 
+      const miDiv = document.getElementById("miDiv"); 
 
       miDiv.addEventListener("click", function () {
+        // No es rojo, es red
         miDiv.style.backgroundColor = "rojo";
       });
     </script>

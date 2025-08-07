@@ -6,11 +6,12 @@
     <title>Ejercicios</title>
   </head>
   <body>
-    <h1>¿Por qué la función  contarMayoresDeDiez no cuenta bien los números mayores de 10?</h1>
+    <h1>¿Por qué la función contarMayoresDeDiez no cuenta bien los números mayores de 10?</h1>
     <script>
       function contarMayoresDeDiez(numeros) {
         let contador = 0;
         for (let i = 0; i < numeros.length; i++) {
+          // El problema es que debe ser >, no >=
           if (numeros[i] >= 10) {
             contador++;
           }

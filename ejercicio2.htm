@@ -19,6 +19,20 @@
             left:0;
         }
        
+        #coche1 {
+            animation: animacion 3s linear infinite;
+        }
+        #coche2 {
+            animation: animacion 3s ease-in infinite;
+        }
+        #coche3 {
+            animation: animacion 3s ease-out infinite;
+        }        
+        @keyframes animacion {
+            100% {
+                left: 100%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -36,9 +50,10 @@
             <ul class="bg-body w-50 m-auto text-start list-group list-unstyled p-2">
                 <li class="list-group-item">El primer coche tiene que ir hasta la derecha del todo en 3 segundos (left a 100%), de forma indefinida y a velocidad constante</li>
                 <li class="list-group-item">El segundo coche igual, pero debe comenzar más despacio y luego ir acelerando</li>
-                <li class="list-group-item">El tercer coche igual, pero debe comenzar más rápidos y luego ir decelerando</li>
+                <li class="list-group-item">El tercer coche igual, pero debe comenzar más rápido y luego ir decelerando</li>
             </ul>
-        <video src="videos/video2.mp4" width="500" autoplay loop class="border-1 border m-auto d-block"></video>
+        <!-- Chrome y Edge no reproducen automáticamente un video salvo que le pongamos el atributo muted (sin sonido)-->
+        <video src="videos/video2.mp4" width="500" muted autoplay loop class="border-1 border m-auto d-block"></video>
     </main>
     </main>
 </body>

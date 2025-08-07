@@ -34,9 +34,18 @@
             <li class="list-group-item">De forma infinita</li>
             <li class="list-group-item">Se debe usar Animations Web API para todo, no CSS</li>
         </ul>
-        <video src="videos/video3.mp4" width="200" autoplay loop class="border-1 border m-auto d-block"></video>
+        <video src="videos/video3.mp4" width="200" muted autoplay loop class="border-1 border m-auto d-block"></video>
     </main>
-    </main>
+    <script>
+        const cuadros = [
+            {transform: "translateY(130px) rotate(360deg)"}
+        ];
+        const opciones = {duration: 1000, iterations: Infinity, direction: "alternate"}
+        document.getElementById("pelota").animate(cuadros, opciones);
+
+    </script>
 </body>
 </html>
+
+
 

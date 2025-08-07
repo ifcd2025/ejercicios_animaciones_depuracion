@@ -17,6 +17,14 @@
             aspect-ratio: 1;
             display: block;
             margin: auto;
+            animation: animacion 1s  infinite;
+        }
+
+        @keyframes animacion {
+            100% {
+                transform: translateY(130px) rotate(360deg);
+            }
+            
         }
        
     </style>
@@ -32,7 +40,9 @@
             <li class="list-group-item">Durante 1 segundo y que luego la animación la haga al revés (opción alternate)</li>
             <li class="list-group-item">De forma infinita</li>
         </ul>
-        <video src="videos/video3.mp4" width="200" autoplay loop class="border-1 border m-auto d-block"></video>
+        <!-- Chrome y Edge no reproducen automáticamente un video salvo que le pongamos el atributo muted (sin sonido)-->
+
+        <video src="videos/video3.mp4" width="200" autoplay muted loop class="border-1 border m-auto d-block"></video>
     </main>
     </main>
 </body>
