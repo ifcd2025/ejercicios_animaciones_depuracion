@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+
+    <!-- Imágenes de Flaticon.com, salvo oveja de https://es.picmix.com/stamp/Running-Sheep-1863259 -->
+
+    <style>
+        img {
+            width: 100px;
+        }
+        #contenedor {
+            width: fit-content;
+        }
+       
+    </style>
+</head>
+<body>
+    <header class="text-center bg-danger text-white"><h1>Animaciones CSS con Animations Web API</h1></header>
+    <main>
+        <div class="d-flex m-auto flex-column gap-2 align-items-center" id="contenedor">
+            <img src="imagenes/sol.png" alt="" id="sol">
+            <div>
+                <input type="button" name="agrandar" id="agrandar" value="escalar" class="btn btn-primary">
+                <input type="button" name="rotar" id="rotar" value="rotar" class="btn btn-primary">
+                <input type="button" name="empequeñecer" id="empequeñecer" value="empequeñecer" class="btn btn-primary">
+            </div>
+        </div>
+        </div>
+            <ul class="bg-body w-50 m-auto text-start list-group list-unstyled p-2">
+                <li class="list-group-item">Botón agrandar: un 50% más durante 1s y luego volver a su estado normal</li>
+                <li class="list-group-item">Botón rotar: 360 grados durante 1s y luego volver a su estado normal</li>
+                <li class="list-group-item">Botón empequeñcer: un 50% menos durante 1s y luego volver a su estado normal</li>   
+                <li class="list-group-item">Se debe usar Animations Web API para todo, no CSS</li>
+            </ul>
+    </main>
+    <script>
+    </script>
+</body>
+</html>
+

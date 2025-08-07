@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicios</title>
+  </head>
+  <body>
+    <h1>Comprobar cual de las dos funciones JS tarda más tiempo en ejecutarse</h1>
+    <script>
+      function sumarPares1(arr) {
+        let suma = 0;
+        for (let i = 0; i < arr.length; i++) {
+          // Bucle anidado para verificar la paridad
+          let esPar = false;
+          for (let j = 0; j < 2; j++) {
+            if (arr[i] % 2 === 0) {
+              esPar = true;
+            }
+          }
+          if (esPar) {
+            suma += arr[i];
+          }
+        }
+        return suma;
+      }
+
+      function sumarPares2(arr) {
+        let suma = 0;
+        for (let i = 0; i < arr.length; i++) {
+
+          if (arr[i] % 2 === 0) {
+            suma += arr[i];
+          }
+        }
+        return suma;
+      }
+
+      const array = Array.from({ length: 20_000_000 }, () => Math.floor(Math.random() * 100) + 1);
+
+      sumarPares1(array);
+
+      sumarPares2(array);
+    </script>
+  </body>
+</html>

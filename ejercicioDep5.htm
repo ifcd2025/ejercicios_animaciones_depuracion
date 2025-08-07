@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicios</title>
+  </head>
+  <body>
+    <h1>
+      QUeremos que al hacer click en el div cambie su color de fondo, pero no funciona ¿Qué errores hay?
+    </h1>
+    <div
+      id="miDiv"
+      style="width: 100px; height: 100px; background-color: blue"
+    ></div>
+
+    <script>
+      const miDiv = document.getElementsById("miDiv"); 
+
+      miDiv.addEventListener("click", function () {
+        miDiv.style.backgroundColor = "rojo";
+      });
+    </script>
+  </body>
+</html>

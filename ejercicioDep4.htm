@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicios</title>
+  </head>
+  <body>
+    <h1>¿Por qué la función  contarMayoresDeDiez no cuenta bien los números mayores de 10?</h1>
+    <script>
+      function contarMayoresDeDiez(numeros) {
+        let contador = 0;
+        for (let i = 0; i < numeros.length; i++) {
+          if (numeros[i] >= 10) {
+            contador++;
+          }
+        }
+        return contador;
+      }
+
+      const miArray = [5, 12, 8, 15, 10, 20];
+      console.log(contarMayoresDeDiez(miArray)); 
+    </script>
+  </body>
+</html>
